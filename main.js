@@ -3,6 +3,8 @@ const dialogue = document.querySelector('#dialogue');
 const choices = document.querySelector('#choices');
 const touchPrompt = document.querySelector('#touchPrompt');
 const redEyes = document.querySelector('.red-eyes');
+
+
 const eyeElements = redEyes.querySelectorAll('i');
 const lines = [
   'Hello....',
@@ -62,6 +64,7 @@ function showFinalChoices() {
   window.setTimeout(() => document.body.classList.remove('flicker'), 1200);
   showChoices([
     { label: 'Ok????' },
+    
     { label: 'Why? Im not doing that, Im not good at this', reply: 'Me neither trust me the last time I played I scored -1.' },
     { label: 'When do I start?', reply: 'Right now! GO FAST' }
   ]);
@@ -85,6 +88,7 @@ function startConversation() {
 
 conversation.addEventListener('click', (event) => {
   if (event.target.closest('button')) return;
+  
   startConversation();
 });
 
@@ -105,3 +109,14 @@ document.addEventListener('mousemove', (event) => {
   });
 });
 
+const fullscreenBtn = document.querySelector('#fullscreenBtn');
+if (fullscreenBtn) {
+  fullscreenBtn.addEventListener('click', (e) => {
+    e.stopPropagation(); 
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen().catch(() => {});
+    } else {
+      document.exitFullscreen().catch(() => {});
+    }
+  });
+}
