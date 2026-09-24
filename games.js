@@ -18,7 +18,7 @@ let nextJumpscareAt = 0;
 
 function showJumpscare(force = false) {
   if (jumpscareShowing || (!force && Date.now() < nextJumpscareAt)) return;
-  nextJumpscareAt = Date.now() + 10000;
+  nextJumpscareAt = Date.now() + 5000;
   jumpscareShowing = true;
   jumpscare.classList.remove('final');
   jumpscareImage.src = './jumpscare.png';
