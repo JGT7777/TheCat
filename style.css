@@ -126,30 +126,26 @@ body.flicker .conversation { animation: screen-flicker .18s steps(2) 7; }
 @keyframes screen-flicker { 0%, 100% { filter: none; } 25% { filter: brightness(3) contrast(.6); } 50% { filter: brightness(.2); } 75% { filter: brightness(2); } }
 @media (max-width: 700px) { .conversation { padding: 24px 5vw 20px; } .conversation-copy { min-height: 260px; } .dialogue { min-height: 100px; font-size: clamp(25px, 8vw, 42px); } .choice-button { width: 100%; } .red-eyes { bottom: 8%; } }
 
+
 .fullscreen-button {
   position: fixed;
   top: 20px;
   right: 20px;
-
-
-  
-  z-index: 100;
-  background: rgba(9, 9, 9, 0.85);
-  border: 1px solid var(--line);
-  
-  color: var(--paper);
-  padding: 10px 16px;
-  font-family: 'IBM Plex Mono', monospace;
+  z-index: 9999;
+  background: #090909;
+  border: 1px solid #333333;
+  color: #e0e0e0;
+  padding: 8px 14px;
+  font-family: monospace, sans-serif;
   font-size: 11px;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   cursor: pointer;
   transition: all 0.25s ease;
+  outline: none;
 }
 
-
 .fullscreen-button:hover {
-  border-color: var(--red);
-  color: var(--red);
+  border-color: #b83b31;
+  color: #b83b31;
   background: rgba(184, 59, 49, 0.15);
-  transform: translateY(-2px);
 }
