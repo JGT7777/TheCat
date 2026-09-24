@@ -11,7 +11,6 @@ I Haaaaaaaaaaaaaateeee CSS a looooot
 
 ---Also I think It's 5-6 maybe 7 hours but I don't think they were 9 hours like hackatime says. It probably bugged or smth...
 
-Bye!
 
 How to play! 
 I made mini lore of a cat who has to save "his friend" I'm not sure if I want to make spoiler rn but...
