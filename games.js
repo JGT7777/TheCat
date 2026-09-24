@@ -18,7 +18,7 @@ let nextJumpscareAt = 0;
 
 function showJumpscare(force = false) {
   if (jumpscareShowing || (!force && Date.now() < nextJumpscareAt)) return;
-  nextJumpscareAt = Date.now() + 5000;
+  nextJumpscareAt = Date.now() + 7000;
   jumpscareShowing = true;
   jumpscare.classList.remove('final');
   jumpscareImage.src = './jumpscare.png';
@@ -34,8 +34,8 @@ function showJumpscare(force = false) {
 window.setInterval(() => {
   const stage = Number(document.body.dataset.stage || 0);
   const activePanel = document.querySelector('.game-panel.active')?.dataset.panel;
-  if (stage >= 2 && activePanel !== '1' && !interlude.classList.contains('visible') && !jumpscareShowing && Math.random() < .2) showJumpscare();
-}, 10000);
+  if (stage >= 2 && activePanel !== '1' && !interlude.classList.contains('visible') && !jumpscareShowing && Math.random() < .4) showJumpscare();
+}, 7000);
 
 function scare(message) {
   mistakeCount += 1;
