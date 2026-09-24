@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090909" />
+    <title>THE FOUR ROOMS</title>
+    <link rel="stylesheet" href="./games.css?v=20260924-repeat-clean" />
+  </head>
+  <body>
+    <div class="noise"></div>
+    <main class="games-shell">
+      <section class="game-panel active" data-panel="1">
+        <div class="panel-copy"><h2>Pairs.</h2></div>
+        <div class="memory-area"><div class="memory-board" id="memoryBoard"></div><p class="game-message" id="memoryMessage"></p></div>
+      </section>
+      <section class="game-panel" data-panel="2">
+        <div class="panel-copy"><h2>ESCAPE.</h2></div>
+        <div class="dodge-game" id="dodgeGame"><div class="dodge-timer" id="dodgeTimerDisplay">30</div><div class="dodge-door" id="dodgeDoor" aria-label="green exit door"><span>EXIT</span></div><div class="dodge-player" id="dodgePlayer" aria-label="your cursor"></div><div class="dodge-ghosts" id="dodgeGhosts"></div></div>
+      </section>
+      <section class="game-panel" data-panel="3">
+        <div class="panel-copy"><p class="panel-kicker">03</p><h2>Repeat.</h2><button class="listen" id="listen">listen</button></div>
+        <div class="signal-game"><div class="signal-lights" id="signalLights"><button data-tone="0" aria-label="sound 1"></button><button data-tone="1" aria-label="sound 2"></button><button data-tone="2" aria-label="sound 3"></button><button data-tone="3" aria-label="sound 4"></button></div></div><p class="game-message" id="signalMessage" aria-live="polite"></p>
+      </section>
+      <section class="game-panel" data-panel="4">
+        <div class="panel-copy"><p class="panel-kicker">04</p><h2>Kill it.</h2></div>
+        <div class="eye-game" id="eyeGame"><button id="movingEye" aria-label="catch the ghost"></button><strong class="eye-score" id="eyeScore">0 / 10</strong></div><p class="game-message" id="eyeMessage"></p>
+      </section>
+    </main>
+    <section class="interlude" id="interlude" aria-hidden="true">
+      <div class="interlude-flash"></div>
+      <div class="interlude-eyes"><i></i><i></i></div>
+      <div class="interlude-copy"><p id="interludeKicker">the room changed</p><div id="interludeText"></div><button id="continueButton">continue</button></div>
+    </section>
+    <section class="betrayal" id="betrayal" aria-hidden="true">
+      <div class="betrayal-noise"></div>
+      <div class="betrayal-eyes"><i></i><i></i></div>
+      <div class="betrayal-copy">
+        <p class="betrayal-small"></p>
+        <div class="betrayal-text" id="betrayalText"></div>
+        <button id="betrayalButton">continue</button>
+      </div>
+    </section>
+    <div class="jumpscare" id="jumpscare" aria-hidden="true">
+      <img id="jumpscareImage" src="./jumpscare.png" alt="" />
+    </div>
+    <script type="module" src="./games.js?v=20260924-ghost-fix"></script>
+  </body>
+</html>

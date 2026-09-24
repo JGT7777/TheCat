@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#080808" />
+    <title>THE CAT...</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="intro-active">
+    <div class="grain"></div>
+    <main id="top">
+      <section class="conversation" id="conversation">
+        <div class="conversation-scene">
+          <div class="conversation-copy">
+            <div class="dialogue" id="dialogue" aria-live="polite"></div>
+            <span class="typing-cursor"></span>
+            <p class="touch-prompt" id="touchPrompt">[ click anywhere to continue ]</p>
+            <div class="choices" id="choices"></div>
+          </div>
+        </div>
+        <div class="red-eyes" aria-hidden="true"><i></i><i></i></div>
+      </section>
+    </main>
+    <script type="module" src="./main.js"></script>
+  </body>
+
+</html>
